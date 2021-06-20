@@ -17,9 +17,9 @@ class ISelenium(unittest.TestCase):
     def get_config(self):
         config = configparser.ConfigParser()
         if (platform.system() == 'Windows'):
-            config.read(os.path.join(os.environ['HOMEPATHPATHPATH'], 'iselenium.ini'))
+            config.read(os.path.join(os.environ['HOMEPATH'], 'iselenium.ini'))
         else:
-            config.read(os.path.join(os.environ['HOMEPATHPATH'], 'iselenium.ini'))
+            config.read(os.path.join(os.environ['HOME'], 'iselenium.ini'))
         return config
 
     def tearDown(self):
