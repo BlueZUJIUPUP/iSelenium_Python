@@ -17,8 +17,10 @@ class ISelenium(unittest.TestCase):
     def get_config(self):
         config = configparser.ConfigParser()
         if (platform.system() == 'Windows'):
+            print("Windows")
             config.read(os.path.join(os.environ['HOMEPATH'], 'iselenium.ini'))
         else:
+            print("mac||linux")
             config.read(os.path.join(os.environ['HOME'], 'iselenium.ini'))
         return config
 
